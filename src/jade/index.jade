@@ -1,0 +1,29 @@
+html
+  mixin work(id,img_src, img_src2, img_src3)
+    - id = id || ""
+    - img_src = img_src || ""
+    .work(id=id)
+      img(src="/assets/" + img_src + ".png")
+      if img_src2
+        img(src="/assets/" + img_src2 + ".png")
+      if img_src3
+        img(src="/assets/" + img_src3 + ".png")
+  head
+    link(rel="stylesheet", href="/styles/main.css")
+  body
+    header
+      .left
+        h1 JYOTSNA GORLE
+      .right.menu
+        ul
+          li PORTFOLIO
+          li RESUME
+          li ABOUT
+    .grey-line
+    .content
+      p.tagline You use a glass mirror to see your face; you use works of art to see your soul.<br> - George Bernard Shaw
+      .works
+        +work("dev_hub_website", "thumbnails/the_rovers")
+        +work("mobile_chat_bot", "thumbnails/mobile_chat_bot_1", "thumbnails/mobile_chat_bot_2", "thumbnails/mobile_chat_bot_3")
+        +work("women_in_it", "thumbnails/women", "thumbnails/women_text")
+        +work("dev_hub_website", "thumbnails/dev_hub_website")
