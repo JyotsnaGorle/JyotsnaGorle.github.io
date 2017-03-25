@@ -3,17 +3,17 @@ html
     - id = id || ""
     - img_src = img_src || ""
     .work(id=id)
-      img(src="/assets/" + img_src + ".png")
+      img(src="output/assets/" + img_src + ".png")
       if img_src2
-        img(src="/assets/" + img_src2 + ".png")
+        img(src="output/assets/" + img_src2 + ".png")
       if img_src3
-        img(src="/assets/" + img_src3 + ".png")
+        img(src="output/assets/" + img_src3 + ".png")
   head
-    link(rel="stylesheet", href="/styles/main.css")
+    link(rel="stylesheet", href="output/styles/main.css")
   body
     header
       .left.name
-        img.logo(src="/assets/thumbnails/icon_jyo.png")
+        img.logo(src="output/assets/thumbnails/icon_jyo.png")
         h1 JYOTSNA GORLE
       .right.menu
         ul

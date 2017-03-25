@@ -7,7 +7,7 @@ var app = express();
 
 gulp.task("serve", function () {
   app.use(express.static(path.resolve("./vendor/bower_components")));
-  app.use(express.static(path.resolve("./output")));
+  app.use(express.static(path.resolve("./")));
   app.listen(5454);
   gutil.log("Listening on port: 5454");
 });

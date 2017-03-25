@@ -12,7 +12,7 @@ gulp.task("jade", function () {
   gutil.log("compiling JADE");
   return gulp.src("src/jade/index.jade")
     .pipe(jade())
-    .pipe(gulp.dest('./output'))
+    .pipe(gulp.dest('./'))
     .pipe(browsersync.reload({stream: true}));
 });
 
